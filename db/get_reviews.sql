@@ -1,0 +1,1 @@
+select * from reviews where school_id = $1;
