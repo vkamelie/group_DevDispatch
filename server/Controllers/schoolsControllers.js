@@ -2,6 +2,7 @@ const { data } = require("../schools");
 
 module.exports = {
   getSchoolQuery: (req, res) => {
+    console.log('hit')
     //This endpoint is for the input in Home.js. It filters schools which have QUERY included in the title
     //Which is needed for the modal under the input
 
