@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import routes from "./routes";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
+
 import { withRouter } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
@@ -36,6 +38,7 @@ class App extends Component {
         {this.props.location.pathname !== "/" ? <NavBar /> : <div />}
         {routes}
         <div>{/* <button onClick={this.login}>Login</button> */}</div>
+        {Footer}
       </div>
     );
   }
