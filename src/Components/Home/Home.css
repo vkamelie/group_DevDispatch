@@ -1,0 +1,45 @@
+.home-main {
+    height: 60vh;
+    width: 100vw;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://wonderfulengineering.com/wp-content/uploads/2014/09/Green-Wallpaper-3.jpg');
+}
+
+.input-modal {
+    width: 50%;
+}
+
+.home-input {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+    font-size: 2em;
+}
+
+.search-button {
+  height: 50px;
+  border: none;
+}
+
+.top-rated {
+    width: 100vw;
+    height: 40vh;
+    background-color: blue;
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.top-rated-schools {
+    display: flex;
+}
+
+.top-rated h1 {
+    margin: 0;
+    padding: 0;
+
+}

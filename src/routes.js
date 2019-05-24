@@ -8,8 +8,8 @@ import Advise from "./components/Advise/Advise";
 export default (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route exact path="/Advise" component={Advise} />
-    <Route exact path="/About" component={About} />
-    <Route exact path="/Browse" component={Browse} />
+    <Route  path="/Advise" component={Advise} />
+    <Route  path="/About" component={About} />
+    <Route  path="/Browse" component={Browse} />
   </Switch>
 );

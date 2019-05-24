@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import "./App.css";
+// import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -33,14 +33,7 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        {this.props.location.pathname !== "/" ? <NavBar /> : <div />}
-        {routes}
-        <div>{/* <button onClick={this.login}>Login</button> */}</div>
-        {Footer}
-      </div>
-    );
+    return this.props.location.pathname !== "/" ? <NavBar /> :  routes;
   }
 }
 

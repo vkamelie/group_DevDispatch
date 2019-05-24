@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import search from "../../media/search.svg";
 
 import axios from "axios";
+import Modal from "../Home/Modal/Modal";
+import "./Home.css";
+import Flexbox from '../Flexbox/Flexbox';
+import Schools from '../Schools/Schools'
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -12,50 +16,51 @@ class Home extends Component {
       toggle: false
     };
   }
+
+
   // Search results for Input
   handleInput = val => {
     this.setState({
       input: val
     });
-    axios.get(`/schools?query=${this.state.input}`).then(response => {
+    axios.get(`/schools?query=${val}`).then(response => {
       this.setState({
         schools: response.data
       });
     });
   };
-  //   Search Model Show
-  showSearch = () => {
-    this.setState({
-      toggle: true
-    });
-  };
-  //   Search Model close
-  closeSearch = () => {
-    this.setState({
-      toggle: false
-    });
-  };
+
+  //Search Model close
   render() {
     return (
-      <div>
-        <div className="searchSet">
-          <input
-            placeholder={"Type a School Name"}
-            type="text"
-            value={this.state.input}
-            onChange={e => this.handleInput(e.target.value)}
-          />
-          <button title="Submit" type="submit">
-            <img src={search} alt="icon" />
-          </button>
+      <React.Fragment>
+        <div className="home-main">
+          <div className="input-modal">
+            <input
+              placeholder="Find a school :)"
+              type="text"
+              value={this.state.input}
+              onChange={e => this.handleInput(e.target.value)}
+              class="home-input"
+            />
+            <Modal
+              show={!!this.state.input.length}
+              schools={this.state.schools}
+            />
+          </div>
+          {/* <button title="Submit" type="submit">
+          <img src={search} alt="icon" className="search-button" />
+        </button> */}
         </div>
-        <button onClick={this.showSearch}>Open</button>
-        <div className={` ${this.state.toggle ? "show" : "close"}`}>
-          <button onClick={this.closeSearch}>Close</button>
+        <div className = 'top-rated'>
+          <h1>Featured Schools</h1>
+          <Schools />
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
+//Featured
+//Most reviewed => order by desc
 
 export default Home;
