@@ -5,7 +5,16 @@ class About extends Component {
     this.state = {};
   }
   render() {
-    return <div>Hello This is the About</div>;
+    return (
+      <div>
+        <div>Hello This is the About</div>
+        <p>We'll have to figure out as a group what to put here</p>
+        <p>We'll have to figure out as a group what to put here</p>
+        <p>We'll have to figure out as a group what to put here</p>
+        <p />
+        <p />
+      </div>
+    );
   }
 }
 
