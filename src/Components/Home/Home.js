@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import { placeholder } from "@babel/types";
 import search from "../../media/search.svg";
+
 import axios from "axios";
 class Home extends Component {
   constructor(props) {

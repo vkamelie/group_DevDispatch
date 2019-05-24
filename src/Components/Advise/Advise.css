@@ -1,0 +1,16 @@
+.advise-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.advise-main img {
+  height: 200px;
+  width: 250px;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
