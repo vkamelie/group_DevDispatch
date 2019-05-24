@@ -4,6 +4,8 @@ import search from "../../media/search.svg";
 import axios from "axios";
 import Modal from "../Home/Modal/Modal";
 import "./Home.css";
+import Flexbox from '../Flexbox/Flexbox';
+import Schools from '../Schools/Schools'
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +15,8 @@ class Home extends Component {
       toggle: false
     };
   }
+
+
   // Search results for Input
   handleInput = val => {
     this.setState({
@@ -28,24 +32,30 @@ class Home extends Component {
   //Search Model close
   render() {
     return (
-      <div className="home-main">
-        <div className="input-modal">
-          <input
-            placeholder="Find a school :)"
-            type="text"
-            value={this.state.input}
-            onChange={e => this.handleInput(e.target.value)}
-            class="home-input"
-          />
-          <Modal
-            show={!!this.state.input.length}
-            schools={this.state.schools}
-          />
-        </div>
-        {/* <button title="Submit" type="submit">
+      <React.Fragment>
+        <div className="home-main">
+          <div className="input-modal">
+            <input
+              placeholder="Find a school :)"
+              type="text"
+              value={this.state.input}
+              onChange={e => this.handleInput(e.target.value)}
+              class="home-input"
+            />
+            <Modal
+              show={!!this.state.input.length}
+              schools={this.state.schools}
+            />
+          </div>
+          {/* <button title="Submit" type="submit">
           <img src={search} alt="icon" className="search-button" />
         </button> */}
-      </div>
+        </div>
+        <div className = 'top-rated'>
+          <h1>Featured Schools</h1>
+          <Schools />
+        </div>
+      </React.Fragment>
     );
   }
 }

@@ -23,3 +23,23 @@
   height: 50px;
   border: none;
 }
+
+.top-rated {
+    width: 100vw;
+    height: 40vh;
+    background-color: blue;
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.top-rated-schools {
+    display: flex;
+}
+
+.top-rated h1 {
+    margin: 0;
+    padding: 0;
+
+}
