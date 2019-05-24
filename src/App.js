@@ -35,9 +35,7 @@ class App extends Component {
       <div className="App">
         {this.props.location.pathname !== "/" ? <NavBar /> : <div />}
         {routes}
-        <div>
-          <button onClick={this.login}>Login</button>
-        </div>
+        <div>{/* <button onClick={this.login}>Login</button> */}</div>
       </div>
     );
   }
