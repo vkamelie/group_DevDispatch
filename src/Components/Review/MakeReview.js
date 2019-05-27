@@ -1,5 +1,4 @@
-
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -20,9 +19,11 @@ class MakeReview extends Component {
   }
 
   componentDidMount() {
-    axios.get("/api/user-data").then(res => {
-      console.log(res.data);
-    });
+    setTimeout(() => {
+      axios.get("/api/user-data").then(res => {
+        console.log(res.data);
+      });
+    }, 5000);
   }
 
   login() {
@@ -59,7 +60,7 @@ class MakeReview extends Component {
       year
     };
     axios
-      .post(`/api/schools/${id}/reviews`, obj)
+      .post(`/api/schools/:id/reviews`, obj)
       .then(res => {
         this.setState({ reviews: res.data });
       })
