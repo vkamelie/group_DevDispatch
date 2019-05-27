@@ -1,21 +1,17 @@
-import React, { Component  } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+//import axios from 'axios';
 
 export default class Schools extends Component {
-    constructor() { 
-        super();
-        this.state = {
-            featured: []
-        }
-    }
+  constructor() {
+    super();
+    this.state = {
+      featured: []
+    };
+  }
 
-    componentDidMount() { 
-        
-    }
+  componentDidMount() {}
 
-    render() { 
-        return (
-            <h1>Schools!</h1>
-        )
-    }
+  render() {
+    return <h1>Schools!</h1>;
+  }
 }

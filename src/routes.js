@@ -4,12 +4,14 @@ import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Browse from "./components/Browse/Browse";
 import Advise from "./components/Advise/Advise";
+import Review from "./components/Review/MakeReview";
 
 export default (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route  path="/Advise" component={Advise} />
-    <Route  path="/About" component={About} />
-    <Route  path="/Browse" component={Browse} />
+    <Route path="/Advise" component={Advise} />
+    <Route path="/About" component={About} />
+    <Route path="/Browse" component={Browse} />
+    <Route path="/Review" component={Review} />
   </Switch>
 );
