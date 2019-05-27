@@ -35,12 +35,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.props.location.pathname !== "/" ? (
-          <NavBar login={this.login} />
-        ) : (
-          <div />
-        )}
+
+ 
+
+        {this.props.location.pathname !== "/" ? <NavBar /> : <div />}
         {routes}
+        {Footer}
+
       </div>
     );
   }
