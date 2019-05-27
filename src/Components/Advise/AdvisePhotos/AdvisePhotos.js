@@ -1,24 +1,23 @@
 import React from "react";
-import MeetUp from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/meetup.png";
+import MeetUp from "./meetup.png";
 
-import toastMasters from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/toastmasters.jpeg";
+import toastMasters from "./toastmasters.jpeg";
 
-import FirstYear from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/codecampArt.jpeg";
+import FirstYear from "./codecampArt.jpeg";
 
-import codingBootcampRate from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/Coding-Bootcamp-Ratings-Dice-1200x750.png";
+import codingBootcampRate from "./Coding-Bootcamp-Ratings-Dice-1200x750.png";
 
-import Imposter from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/friends-indoors-people-1666471.jpg";
+import Imposter from "./friends-indoors-people-1666471.jpg";
 
-import podcastArt from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/headphones.png";
+import podcastArt from "./headphones.png";
 
-import codeNewbie from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/codenewbie.jpg";
+import codeNewbie from "./codenewbie.jpg";
 
-import syxntax from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/logo.png";
+import syxntax from "./logo.png";
 
-import devTea from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/developertea.jpg";
+import devTea from "./developertea.jpg";
 
-import codingBlocks from "/Users/adriannavalois/Desktop/devm1/group_project/devdispatch/src/components/Advise/AdvisePhotos/CodingBlocks_170x170-2.jpg";
-import { isTSImportEqualsDeclaration } from "@babel/types";
+import codingBlocks from "./CodingBlocks_170x170-2.jpg";
 
 export const YearFirst = (
   <img src={FirstYear} alt="first year after bootcamp article" />

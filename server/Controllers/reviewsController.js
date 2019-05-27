@@ -19,7 +19,7 @@ module.exports = {
   getReviews: async (req, res) => {
     const { id } = req.params;
     const db = req.app.get("db");
-    const school = data.filter(school => school.id == id);
+    const school = data.filter(school => school.id == id)[0];
     const reviews = await db.get_reviews(id);
     res.status(200).send({
       school,
