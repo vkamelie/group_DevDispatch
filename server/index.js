@@ -37,7 +37,7 @@ massive(CONNECTION_STRING)
 
 //Middlewares
 const reviewsController = require("./Controllers/reviewsController");
-const schoolsController = require("./Controllers/schoolsController");
+const schoolsController = require("./Controllers/schoolsControllers");
 
 //Endpoints
 

@@ -33,7 +33,13 @@ class App extends Component {
   }
 
   render() {
-    return this.props.location.pathname !== "/" ? <NavBar /> :  routes;
+    return (
+      <div className="App">
+        {this.props.location.pathname !== "/" ? <NavBar /> : <div />}
+        {routes}
+        {Footer}
+      </div>
+    );
   }
 }
 
