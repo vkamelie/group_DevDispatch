@@ -20,7 +20,7 @@ app.use(
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true }
+    cookie: { secure: false }
   })
 );
 
@@ -29,7 +29,7 @@ massive(CONNECTION_STRING)
   .then(db => {
     console.log("connected to db");
     app.set("db", db);
-    db.init(); //Make sure we take this out when we run our build
+    // db.init(); //Make sure we take this out when we run our build
   })
   .catch(err => {
     console.log("Failed to connect to db");
@@ -47,7 +47,7 @@ app.get("/api/user-data", authController.getUser);
 
 //This returns all info for a school, which includes the reviews associated with it
 app.get("/schools/:id/reviews", reviewsController.getReviews);
-app.post("/schools/:id/reviews", reviewsController.addReview);
+app.post("/schools/:id/reviews", authController.usersOnly, reviewsController.addReview);
 
 //This is what is fired from the input in Home.js. This is used to search for school by keyword, which opens a modal
 app.get("/schools", schoolsController.getSchoolQuery);

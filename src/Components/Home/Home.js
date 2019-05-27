@@ -40,7 +40,7 @@ class Home extends Component {
               type="text"
               value={this.state.input}
               onChange={e => this.handleInput(e.target.value)}
-              class="home-input"
+              className="home-input"
             />
             <Modal
               show={!!this.state.input.length}
@@ -53,7 +53,7 @@ class Home extends Component {
         </div>
         <div className="top-rated">
           <h1>Featured Schools</h1>
-          <Schools />
+          {/* <Schools /> */}
         </div>
       </React.Fragment>
     );
