@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 // import { placeholder } from "@babel/types";
-import search from "../../media/search.svg";
+//import search from "../../media/search.svg";
 
 import axios from "axios";
 import Modal from "../Home/Modal/Modal";
 import "./Home.css";
-import Flexbox from '../Flexbox/Flexbox';
-import Schools from '../Schools/Schools'
+//import Flexbox from '../Flexbox/Flexbox';
+import Schools from "../Schools/Schools";
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +16,6 @@ class Home extends Component {
       toggle: false
     };
   }
-
 
   // Search results for Input
   handleInput = val => {
@@ -52,7 +51,7 @@ class Home extends Component {
           <img src={search} alt="icon" className="search-button" />
         </button> */}
         </div>
-        <div className = 'top-rated'>
+        <div className="top-rated">
           <h1>Featured Schools</h1>
           <Schools />
         </div>
