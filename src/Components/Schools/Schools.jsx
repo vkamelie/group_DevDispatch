@@ -62,7 +62,7 @@ class Schools extends Component {
 
               <div className="Reviews" id="Reviews">
                             <Reviews reviews={Schools.reviews} />
-                            <MakeReview />
+                            <MakeReview name={Schools.name} courses={courses} id={this.props.match.params.id} />
               </div>
             </div>
             <div className="SideTab" />

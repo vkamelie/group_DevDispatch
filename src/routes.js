@@ -13,7 +13,7 @@ export default (
     <Route  path="/Advise" component={Advise} />
     <Route  path="/Browse" component={Browse} />
     <Route  path="/Review" component={Review} />
-    <Route  path="/schools/:id/reviews" component={Schools} />
-
+    <Route path="/schools/:id/reviews" component={Schools} />
+    
   </Switch>
 );

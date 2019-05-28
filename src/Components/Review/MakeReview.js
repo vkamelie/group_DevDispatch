@@ -114,6 +114,7 @@ class MakeReview extends Component {
   };
 
   render() {
+    console.log(this.props.courses)
     const {
       title,
       description,
