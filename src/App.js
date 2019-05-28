@@ -38,7 +38,7 @@ class App extends Component {
       <div className="App">
         {this.props.location.pathname !== "/" ? <NavBar /> : <div />}
         {routes}
-        {Footer}
+        <Footer />
       </div>
     );
   }

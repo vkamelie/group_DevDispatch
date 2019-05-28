@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 //import { Link } from "react-router-dom";
+import "./Schools.css";
 
 class Schools extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class Schools extends Component {
         {this.state.Schools && (
           <div className="main">
             <h1>{Schools.school.name}</h1>
-            <div className="Header">
+            <div className="Header-school">
               <a href="#About">
                 <button>About</button>
               </a>

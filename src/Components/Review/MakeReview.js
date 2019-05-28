@@ -19,11 +19,9 @@ class MakeReview extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      axios.get("/api/user-data").then(res => {
-        console.log(res.data);
-      });
-    }, 5000);
+    axios.get("/api/user-data").then(res => {
+      console.log(res.data);
+    });
   }
 
   login() {
