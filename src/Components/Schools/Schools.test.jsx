@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 configure({ adapter: new Adapter() });
 
-describe("make a review component", () => {
+describe("add a School component", () => {
   it("add a value into state", () => {
     const wrapper = shallow(<Schools />);
     const preventDefault = jest.fn();
