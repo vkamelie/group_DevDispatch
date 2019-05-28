@@ -22,11 +22,14 @@ class MakeReview extends Component {
 
   componentDidMount() {
     axios.get("/api/user-data").then(res => {
+
+      console.log(res.data);
       if(res.data){
         this.setState({
           isLoggedIn: true
         })
       }
+
     });
   }
 
