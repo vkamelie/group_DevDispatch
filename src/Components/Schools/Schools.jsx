@@ -61,7 +61,8 @@ class Schools extends Component {
 
 
               <div className="Reviews" id="Reviews">
-                Reviews will go here
+                            <Reviews reviews={Schools.reviews} />
+                            <MakeReview />
               </div>
             </div>
             <div className="SideTab" />
