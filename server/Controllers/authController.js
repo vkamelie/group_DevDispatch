@@ -4,7 +4,7 @@ module.exports = {
   login: (req, res) => {
     const db = req.app.get("");
     console.log(req.session);
-
+    
     // STEP 1.)
     //Make an object called payload with the code recieved from the clientside, client_id, client_secret, grant_type, redirect_uri
     //hint: code is recieved from client side as a query
@@ -35,7 +35,6 @@ module.exports = {
 
     function storeUserInfoInDataBase(userInfo) {
       const userData = userInfo.data;
-      console.log(userData, "userinfo");
       return req.app
         .get("db")
         .find_user_by_auth0_id(userData.sub)
@@ -56,9 +55,11 @@ module.exports = {
               .get("db")
               .create_user(createData)
               .then(newUsers => {
+              
                 console.log(newUsers, "check new users");
                 let user = newUsers[0];
                 console.log(user, "hello users");
+              
                 req.session.user = user;
                 console.log(req.session.user, "SESSION VIEW");
                 res.redirect("/review");
@@ -72,7 +73,11 @@ module.exports = {
       .then(userInfo => storeUserInfoInDataBase(userInfo));
   },
   getUser(req, res) {
+    
     console.log("Sending", req.session);
     res.status(200).json(req.session.user);
+  },
+  usersOnly: (req, res, next) => { 
+   req.session ? next() : res.status(500).send('Must be logged in');
   }
 };

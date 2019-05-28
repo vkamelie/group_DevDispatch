@@ -9,12 +9,10 @@
 }
 
 .school {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
+    text-align: center;
 }
 
 .school:hover {
     background-color: rgba(0,0,0,.2);
-    cursor: 
+    cursor: pointer;
 }
