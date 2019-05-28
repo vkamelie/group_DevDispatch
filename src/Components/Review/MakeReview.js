@@ -65,8 +65,10 @@ class MakeReview extends Component {
       id: this.props.id
     };
     axios
-      .post(`/api/schools/${this.props.id}/reviews`, obj)
-      .then(res => {})
+      .post(`/api/schools/:id/reviews`, obj)
+      .then(res => {
+        this.setState({ reviews: res.data });
+      })
       .catch(function(error) {
         console.log(error);
       });

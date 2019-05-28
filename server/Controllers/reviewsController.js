@@ -18,6 +18,9 @@ module.exports = {
   //This gets all data associated with a schools page, not just reviews
   addReview: async (req, res) => {
     const db = req.app.get("db");
+    console.log(req.session);
+    console.log("reqBody", req.body);
+
     const {
       schoolName,
       id,

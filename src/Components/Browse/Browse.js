@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+//import axios from "axios";
 import BS from "./BS";
 
 class Browse extends Component {
@@ -17,7 +17,6 @@ class Browse extends Component {
           <BS />
         </div>
         <div className="SideTab2" />
-
       </div>
     );
   }

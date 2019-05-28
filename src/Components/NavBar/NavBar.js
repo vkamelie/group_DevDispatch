@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './NavBar.css'
+import logo from "./logo.png";
 export default function NavBar() {
   return (
     <div className="nav-Bar">
+      <div>
+        <img src={logo} alt="Logo" />
+      </div>
       <div className="Nav-1">
         <div className="nav-items">
           <Link to="/">
             <h1 className="Name">DevDispatch</h1>
           </Link>
-          {/* <div className="nav-items"> */}
           <Link to="/Browse">
             <h1 className="Browse">Browse</h1>{" "}
           </Link>
