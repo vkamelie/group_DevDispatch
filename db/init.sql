@@ -11,7 +11,8 @@ username text
 
 create table reviews(
 id serial primary key,
-author_id integer references users(id),
+-- author_id integer references users(id),
+author_id integer,
 school_id integer,
 school_name text,
 title text,

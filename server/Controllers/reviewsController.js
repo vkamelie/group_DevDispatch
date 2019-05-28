@@ -5,8 +5,10 @@ module.exports = {
     const db = req.app.get("db");
     console.log(req.session);
     console.log("reqBody", req.body);
+
     const {
-      school_name,
+      schoolName,
+      id,
       title,
       location,
       course,
@@ -16,10 +18,11 @@ module.exports = {
       rate,
       description
     } = req.body;
-    const { username } = req.session.nickname;
+  const user_id = req.session.user.id;
+
     db.add_review([
-      username,
-      school_name,
+      user_id,
+      id, 
       title,
       location,
       course,
@@ -27,12 +30,15 @@ module.exports = {
       month,
       year,
       rate,
-      description
+      description,
+      schoolName
     ])
       .then(post => {
+        console.log("Success");
         res.status(200).send(post);
       })
       .catch(err => {
+        console.log("Error");
         console.log(err);
       });
   },

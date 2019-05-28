@@ -9,17 +9,6 @@ class Browse extends Component {
       Schools: []
     };
   }
-  // componentDidMount = () => {
-  //   this.getAllSchools();
-  // };
-
-  // getAllSchools = () => {
-  //   axios.get("/schools/all").then(res => {
-  //     this.setState({
-  //       Schools: res.data
-  //     });
-  //   });
-  // };
   render() {
     return (
       <div className="main">

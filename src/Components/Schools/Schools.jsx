@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
-//import { Link } from "react-router-dom";
+
+
 import "./Schools.css";
+
+import { Link } from "react-router-dom";
+import MakeReview from "../Review/MakeReview";
+import Reviews from "../Review/Reviews.jsx"
 
 class Schools extends Component {
   constructor(props) {
@@ -15,30 +20,21 @@ class Schools extends Component {
   };
 
   getReviews = () => {
-    axios.get("/schools/1/reviews").then(res => {
-      console.log(res);
+    axios.get(`/schools/${this.props.match.params.id}/reviews`).then(res => {
       this.setState({
         Schools: res.data
       });
     });
-  };
-  // componentDidMount = () => {
-  //   this.getAllSchools();
-  // };
-
-  // getAllSchools = () => {
-  //   axios.get("/schools/all").then(res => {
-  //     this.setState({
-  //       Schools: res.data
-  //     });
-  //   });
-  // };
+    };
+    
   render() {
     const Schools = this.state.Schools;
+    const courses = this.state.Schools && this.state.Schools.school.courses;
     return (
       <span>
         {this.state.Schools && (
           <div className="main">
+
             <h1>{Schools.school.name}</h1>
             <div className="Header-school">
               <a href="#About">
@@ -62,6 +58,7 @@ class Schools extends Component {
                 Course List will go here
               </div>
               <h1>{Schools.school.courses.name}</h1>
+
 
               <div className="Reviews" id="Reviews">
                 Reviews will go here
