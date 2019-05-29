@@ -29,7 +29,7 @@ class Featured extends Component {
           {console.log(Feature)}
           <Link to={`/schools/${Feature.id}/reviews`}>
             <div className="FeaturedMain">
-              <img>{Feature.pic}</img>
+              <img src={Feature.pic} alt = 'logo'></img>
               <h2>{Feature.name}</h2>
             </div>
           </Link>
