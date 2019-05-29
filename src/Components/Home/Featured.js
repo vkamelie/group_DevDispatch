@@ -15,16 +15,18 @@ class Featured extends Component {
   };
   getFeatured = () => {
     axios.get("/schools/Featured").then(res => {
+      console.log(res.data)
       this.setState({
-        Featured: res.data
+        Featured: res.data.data
       });
     });
   };
   render() {
+
     const Featured = this.state.Featured.map(Feature => {
-      console.log(Feature);
       return (
         <div className="FeaturedList">
+          {console.log(Feature)}
           <Link to={`/schools/${Feature.id}/reviews`}>
             <div className="FeaturedMain">
               <img>{Feature.pic}</img>
@@ -35,7 +37,7 @@ class Featured extends Component {
       );
     });
 
-    return <div className="Fass">{Featured}</div>;
+    return <div className="Fass">{this.state.Featured && Featured}</div>;
   }
 }
 
