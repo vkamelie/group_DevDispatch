@@ -53,6 +53,12 @@ app.post("/schools/:id/reviews", authController.usersOnly, reviewsController.add
 app.get("/schools", schoolsController.getSchoolQuery);
 app.get("/schools/all", schoolsController.getAllSchools);
 
+//API endpoints
+
+app.get('/api/all', (_, res) => { 
+  res.status(200).send(data)
+})
+
 app.listen(PORT, () => {
   console.log(`Server has started on port ${PORT}`);
 });
