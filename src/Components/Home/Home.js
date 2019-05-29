@@ -7,11 +7,13 @@ import Modal from "../Home/Modal/Modal";
 import "./Home.css";
 //import Flexbox from '../Flexbox/Flexbox';
 import Schools from "../Schools/Schools";
+import Featured from "../Home/Featured"
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       schools: [],
+      
       input: "",
       toggle: false
     };
@@ -53,7 +55,7 @@ class Home extends Component {
         </div>
         <div className="top-rated">
           <h1>Featured Schools</h1>
-          {/* <Schools /> */}
+          <Featured />
         </div>
       </React.Fragment>
     );

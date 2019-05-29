@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
-
 import "./Schools.css";
-
-import { Link } from "react-router-dom";
 import MakeReview from "../Review/MakeReview";
 import Reviews from "../Review/Reviews.jsx"
 

@@ -52,6 +52,7 @@ app.post("/schools/:id/reviews", authController.usersOnly, reviewsController.add
 //This is what is fired from the input in Home.js. This is used to search for school by keyword, which opens a modal
 app.get("/schools", schoolsController.getSchoolQuery);
 app.get("/schools/all", schoolsController.getAllSchools);
+app.get("/schools/Featured", schoolsController.getFeatured);
 
 app.listen(PORT, () => {
   console.log(`Server has started on port ${PORT}`);

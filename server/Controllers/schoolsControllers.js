@@ -1,4 +1,5 @@
 const { data } = require("../schools");
+const Featured = require ("../Featured")
 
 module.exports = {
   getSchoolQuery: (req, res) => {
@@ -25,5 +26,9 @@ module.exports = {
   },
   getAllSchools: (req, res) => {
     res.status(200).send(data);
+  },
+  // All the Featured Schools
+  getFeatured: (req, res) => {
+    res.status(200).send(Featured);
   }
 };
