@@ -15,6 +15,7 @@ class BS extends Component {
 
   getAllSchools = () => {
     axios.get("/schools/all").then(res => {
+      console.log(res.data)
       this.setState({
         Schools: res.data
       });

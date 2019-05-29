@@ -1,4 +1,4 @@
-const { data } = require("../schools");
+const data  = require("../schools");
 
 module.exports = {
   addReview: async (req, res) => {

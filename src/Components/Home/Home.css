@@ -27,7 +27,6 @@
 .top-rated {
     width: 100%;
     height: 40vh;
-    background-color: blue;
     text-align: center;
     /* display: flex;
     align-items: center;
@@ -42,4 +41,34 @@
     margin: 0;
     padding: 0;
 
+}
+
+.Fass {
+    width: 80%;
+    overflow-x: scroll;
+    margin: 0 auto;
+    height: 89%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border: 3px solid black;
+}
+
+.FeaturedList {
+    /* padding: 10px; */
+    height: 200px;
+    /* width: 200px; */
+     /* padding: 0 10px; */
+     margin: 0 50px;
+    
+}
+
+.FeaturedMain {
+    border: 3px solid black;
+    background-color: rgba(0,0,255,.5);
+}
+
+.FeaturedList img{
+    height: 180px;
+    width: 180px;
 }

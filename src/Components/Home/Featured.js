@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import './Home.css';
 
 
 class Featured extends Component {
@@ -26,10 +27,9 @@ class Featured extends Component {
     const Featured = this.state.Featured.map(Feature => {
       return (
         <div className="FeaturedList">
-          {console.log(Feature)}
           <Link to={`/schools/${Feature.id}/reviews`}>
             <div className="FeaturedMain">
-              <img src={Feature.pic} alt = 'logo'></img>
+              <img src={Feature.pic} alt = 'logo' />
               <h2>{Feature.name}</h2>
             </div>
           </Link>
@@ -37,7 +37,9 @@ class Featured extends Component {
       );
     });
 
-    return <div className="Fass">{this.state.Featured && Featured}</div>;
+    return <div className="Fass">
+      {this.state.Featured && Featured}
+    </div>;
   }
 }
 
