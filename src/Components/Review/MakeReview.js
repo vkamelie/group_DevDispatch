@@ -114,7 +114,6 @@ class MakeReview extends Component {
   };
 
   render() {
-    console.log(this.props.courses)
     const {
       title,
       description,
@@ -162,9 +161,10 @@ class MakeReview extends Component {
             commentary that violates our policies.
           </li>
         </ul>
-       {!this.state.isLoggedIn && <h3>You must <span style = {{color: 'blue', cursor: 'pointer'}} onClick = {this.login}>log in</span> to submit a review.</h3>}
+        {!this.state.isLoggedIn ? <h3>You must <span style={{ color: 'blue', cursor: 'pointer' }} onClick={this.login}>log in</span> to submit a review.</h3> : <h3 style={{textAlign: 'center', backgroundColor: 'green'}} onClick={this.props.toggleModal}>Write a review</h3>}
         {this.state.isLoggedIn && (
-           <form onSubmit={this.handleSubmit}>
+          <form className={this.props.show ?'form' : 'hidden'} onSubmit={this.handleSubmit}>
+            <h1>Write a review for {this.props.name}</h1>
           <h3>Title</h3>
           <input name="title" value={title} onChange={this.changeHandler} />
           <h3>Description</h3>
@@ -259,7 +259,7 @@ class MakeReview extends Component {
             <option value={4}>4</option>
             <option value={5}>5</option>
           </select>
-          <button type="submit">Submit</button>
+            <button onClick={this.props.toggleModal} type="submit">Submit</button>
         </form>
         )}
       </div>

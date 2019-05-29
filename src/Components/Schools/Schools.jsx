@@ -1,18 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
-
-
 import "./Schools.css";
-
 import { Link } from "react-router-dom";
 import MakeReview from "../Review/MakeReview";
-import Reviews from "../Review/Reviews.jsx"
+import Reviews from "../Review/Reviews.jsx";
 
 class Schools extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Schools: null
+      Schools: null,
+      show: false
     };
   }
   componentDidMount = () => {
@@ -25,8 +23,16 @@ class Schools extends Component {
         Schools: res.data
       });
     });
-    };
-    
+  };
+
+  toggleModal = () => {
+    this.setState({
+      show: !this.state.show
+    })
+
+    this.getReviews()
+  };
+
   render() {
     const Schools = this.state.Schools;
     const courses = this.state.Schools && this.state.Schools.school.courses;
@@ -34,7 +40,6 @@ class Schools extends Component {
       <span>
         {this.state.Schools && (
           <div className="main">
-
             <h1>{Schools.school.name}</h1>
             <div className="Header-school">
               <a href="#About">
@@ -52,22 +57,27 @@ class Schools extends Component {
             <div className="Schools">
               <p>{Schools.school.description}</p>
               <div className="About" id="About">
-                about school will go here
+                <h3>{Schools.description}</h3>
               </div>
               <div className="Courses" id="Courses">
                 Course List will go here
               </div>
               <h1>{Schools.school.courses.name}</h1>
 
-
               <div className="Reviews" id="Reviews">
-                            <Reviews reviews={Schools.reviews} />
-                            <MakeReview name={Schools.name} courses={courses} id={this.props.match.params.id} />
+                <MakeReview
+                  name={this.state.Schools.school.name}
+                  courses={courses}
+                  id={this.props.match.params.id}
+                  show={this.state.show}
+                  toggleModal={this.toggleModal}
+                />
+                <Reviews reviews={Schools.reviews} />
               </div>
             </div>
             <div className="SideTab" />
           </div>
-        )}{" "}
+        )}
       </span>
     );
   }

@@ -3,3 +3,32 @@
     width: 50%;
     margin: 0 auto;
 }
+
+.form {
+    position: fixed;
+    top: calc(50vh - 300px);
+    background-color: gray;
+    width: 300px;
+    height: 500px;
+    left: 200px;
+}
+
+.form {
+    width: 80%;
+    text-align: center;
+}
+
+
+.form input {
+    width: 80%;
+    height: 30px;
+}
+
+.form textarea {
+    height: 250px;
+    width: 80%;
+    font-size: 1.5em;
+}
+.hidden {
+    display: none;
+}
