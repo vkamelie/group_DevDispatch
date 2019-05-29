@@ -54,6 +54,12 @@ app.get("/schools", schoolsController.getSchoolQuery);
 app.get("/schools/all", schoolsController.getAllSchools);
 app.get("/schools/Featured", schoolsController.getFeatured);
 
+//API endpoints
+
+app.get('/api/all', (_, res) => { 
+  res.status(200).send(data)
+})
+
 app.listen(PORT, () => {
   console.log(`Server has started on port ${PORT}`);
 });

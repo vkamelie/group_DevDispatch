@@ -3,6 +3,7 @@ import "./review.css";
 
 export default function Reviews(props) {
   return props.reviews.map(review => {
+    console.log(props)
     return (
       <div className="review">
         <h5>{review.username}</h5>
