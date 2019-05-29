@@ -19,8 +19,8 @@ export default function NavBar() {
           <Link to="/Advise">
             <h1 className="Advise">Advise</h1>{" "}
           </Link>
-          <Link to="/About">
-            <h1 className="About">About</h1>{" "}
+          <Link to="/Review">
+            <h1 className="Review">Write a Review</h1>{" "}
           </Link>
         </div>
       </div>

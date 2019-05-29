@@ -1,4 +1,4 @@
-exports.data = [
+module.exports = [
   {
     name: "<Academia de Código_>",
     id: 1,
