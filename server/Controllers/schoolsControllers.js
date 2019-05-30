@@ -1,3 +1,4 @@
+
 const data  = require("../schools");
 const Featured = require ("../Featured")
 
