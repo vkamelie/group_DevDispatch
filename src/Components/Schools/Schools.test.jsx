@@ -1,21 +1,21 @@
+// Daniel's 2nd Unit Test(attempt) schools.test.js
 import React from "react";
-import Schools from "./Schools";
-import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import { exportAllDeclaration } from "@babel/types";
+import { shallow, configure } from "enzyme";
+import axios from "axios";
+const Schools = require("./Schools");
 
 configure({ adapter: new Adapter() });
 
-describe("add a School component", () => {
-  it("add a value into state", () => {
-    const wrapper = shallow(<Schools />);
-    const preventDefault = jest.fn();
-    wrapper.setState({
-      schoolName: "",
-      title: "",
-      description: "",    
+describe("Unit test container", () => {
+  describe("Schools function", () => {
+    it("Should map over state with correct values", () => {
+      // Declare mock function
+      const Schools = jest.fn();
+      // invoke function we're testing in the arguments
+      Schools.Schools(Schools.school);
+      // write the actual test
+      expect().toHaveBeenCalledWith();
     });
-    wrapper.find("form").simulate("submit", { preventDefault });
-    expect(preventDefault).toBeCalled();
   });
 });

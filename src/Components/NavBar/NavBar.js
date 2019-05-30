@@ -5,14 +5,14 @@ import logo from "./logo.png";
 export default function NavBar() {
   return (
     <div className="nav-Bar">
-      <div>
-        <img src={logo} alt="Logo" />
-      </div>
       <div className="Nav-1">
+  
         <div className="nav-items">
-          <Link to="/">
+        <Link to="/">
+        <img src={logo} alt="Logo" /></Link>
+          {/* <Link to="/">
             <h1 className="Name">DevDispatch</h1>
-          </Link>
+          </Link> */}
           <Link to="/Browse">
             <h1 className="Browse">Browse</h1>{" "}
           </Link>

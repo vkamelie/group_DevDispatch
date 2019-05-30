@@ -122,8 +122,8 @@ class MakeReview extends Component {
     } = this.state;
     return (
       <div>
-        <ul>
-          Review Guidelines
+        <ul className="guide">
+          <h4>Review Guidelines</h4>
           <li>
             Only Applicants, Students, and Graduates are permitted to leave
             reviews on DevDispatch.
