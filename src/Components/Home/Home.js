@@ -49,9 +49,6 @@ class Home extends Component {
               schools={this.state.schools}
             />
           </div>
-          {/* <button title="Submit" type="submit">
-          <img src={search} alt="icon" className="search-button" />
-        </button> */}
         </div>
         <div className="top-rated">
           <h1>Featured Schools</h1>

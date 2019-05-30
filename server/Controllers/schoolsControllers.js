@@ -1,4 +1,5 @@
-const  data  = require("../schools");
+
+const data  = require("../schools");
 const Featured = require ("../Featured")
 
 module.exports = {
