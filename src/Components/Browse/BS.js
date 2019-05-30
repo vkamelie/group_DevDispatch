@@ -9,6 +9,7 @@ class BS extends Component {
       Schools: []
     };
   }
+
   componentDidMount = () => {
     this.getAllSchools();
   };
@@ -21,6 +22,7 @@ class BS extends Component {
       });
     });
   };
+  
   render() {
     const Schools = this.state.Schools.map(School => {
         console.log(School);
