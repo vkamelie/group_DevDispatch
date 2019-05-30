@@ -24,6 +24,7 @@ describe("Home Component", () => {
 
       //Get input
       const input = home.find("input");
+
       //Simulate value change
       input.simulate("change", {
         target: {
@@ -44,11 +45,13 @@ describe("Home Component", () => {
       expect(home.state("input")).toEqual("This is a test");
     });
     it("Makes the proper axios request", () => {
-      //Guess who? Patrick McMahon
+      //Patrick McMahon
+
       //Spy on axios
       const spy = jest.spyOn(axios, "get");
 
       const input = home.find("input");
+
       //Simulate value change
       input.simulate("change", {
         target: {
@@ -60,7 +63,8 @@ describe("Home Component", () => {
   });
   it("Makes sure the Featured component is rendered by Home", () => {
     //Patrick McMahon
-     const homee = mount(<Home />);
-     expect(homee.children(Featured).length).toEqual(0);
+
+    const homee = mount(<Home />);
+    expect(homee.children(Featured).length).toEqual(0);
   });
 });

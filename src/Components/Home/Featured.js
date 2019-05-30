@@ -16,7 +16,6 @@ class Featured extends Component {
   };
   getFeatured = () => {
     axios.get("/schools/Featured").then(res => {
-      console.log(res.data)
       this.setState({
         Featured: res.data.data
       });

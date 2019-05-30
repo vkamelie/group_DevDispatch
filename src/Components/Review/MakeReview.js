@@ -275,6 +275,7 @@ class MakeReview extends Component {
             <button onClick={this.props.toggleModal} type="submit">
               Submit
             </button>
+            <button onClick={this.props.toggleModal}>Nevermind</button>
           </form>
         )}
       </div>

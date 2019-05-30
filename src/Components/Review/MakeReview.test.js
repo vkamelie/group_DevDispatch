@@ -10,7 +10,6 @@ configure({ adapter: new Adapter() });
 describe("make a review component", () => {
   it("add a value into state", () => {
     const wrapper = shallow(<MakeReview />);
-    //   console.log(wrapper.debug());
     const preventDefault = jest.fn();
     wrapper.setState({
       schoolName: "",
