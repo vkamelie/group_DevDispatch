@@ -16,7 +16,7 @@ class Featured extends Component {
   getFeatured = () => {
     axios.get("/schools/Featured").then(res => {
       this.setState({
-        Featured: res.data
+        Featured: res.data.data
       });
     });
   };
@@ -27,7 +27,7 @@ class Featured extends Component {
         <div className="FeaturedList">
           <Link to={`/schools/${Feature.id}/reviews`}>
             <div className="FeaturedMain">
-              <img>{Feature.pic}</img>
+              <img src ={Feature.pic}></img>
               <h2>{Feature.name}</h2>
             </div>
           </Link>
