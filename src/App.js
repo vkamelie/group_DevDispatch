@@ -16,7 +16,6 @@ class App extends Component {
 
   componentDidMount() {
     axios.get("/api/user-data").then(res => {
-      console.log(res.data);
     });
   }
 

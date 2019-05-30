@@ -16,16 +16,14 @@ class BS extends Component {
 
   getAllSchools = () => {
     axios.get("/schools/all").then(res => {
-      console.log(res.data)
       this.setState({
         Schools: res.data
       });
     });
   };
-  
+
   render() {
     const Schools = this.state.Schools.map(School => {
-        console.log(School);
       return (
         <div className="schoolList">
           <Link to={`/schools/${School.id}/reviews`}>
@@ -33,7 +31,6 @@ class BS extends Component {
               <h2>{School.name}</h2>
             </div>
           </Link>
-          <h3>Rating-Avg Rating:4.69</h3>
           <p>{School.description}</p>
         </div>
       );

@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Schools.css";
 import MakeReview from "../Review/MakeReview";
 import Reviews from "../Review/Reviews.jsx";
+import Courses from '../Courses/Courses'
 
 class Schools extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class Schools extends Component {
   render() {
     const Schools = this.state.Schools;
     const courses = this.state.Schools && this.state.Schools.school.courses;
+    console.log(courses)
     return (
       <span>
         {this.state.Schools && (
@@ -64,6 +66,8 @@ class Schools extends Component {
               <h1>{Schools.school.courses.name}</h1>
 
               <div className="Reviews" id="Reviews">
+
+                <Courses courses={courses} />
                 <MakeReview
                   name={this.state.Schools.school.name}
                   courses={courses}

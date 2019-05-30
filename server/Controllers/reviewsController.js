@@ -3,8 +3,6 @@ const data  = require("../schools");
 module.exports = {
   addReview: async (req, res) => {
     const db = req.app.get("db");
-    console.log(req.session);
-    console.log("reqBody", req.body);
 
     const {
       schoolName,
@@ -18,6 +16,7 @@ module.exports = {
       rate,
       description
     } = req.body;
+
   const user_id = req.session.user.id;
 
     db.add_review([
@@ -34,12 +33,10 @@ module.exports = {
       schoolName
     ])
       .then(post => {
-        console.log("Success");
         res.status(200).send(post);
       })
       .catch(err => {
-        console.log("Error");
-        console.log(err);
+        console.error(err);
       });
   },
 

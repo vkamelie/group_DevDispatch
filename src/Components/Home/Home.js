@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-// import { placeholder } from "@babel/types";
-//import search from "../../media/search.svg";
-
 import axios from "axios";
 import Modal from "../Home/Modal/Modal";
 import "./Home.css";
