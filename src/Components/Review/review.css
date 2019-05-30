@@ -1,3 +1,8 @@
+.RMain{
+align-content: center;
+align-items: center;
+justify-content: center;
+}
 .review {
     border: 1px solid red;
     width: 50%;
