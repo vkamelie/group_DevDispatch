@@ -1,5 +1,21 @@
 .nav-items {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    height: 120px;
+    /* background-color: #44cce7; */
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(147, 213, 233),
+        rgb(53, 67, 199)
+      );
+    text-align: center;
+    align-items: center;
+    /* font-family: monospace; */
+    text-decoration-style: none
+    
+}
+a{
+    text-decoration: none;
+    color: black
 }

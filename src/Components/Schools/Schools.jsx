@@ -39,7 +39,6 @@ class Schools extends Component {
       <span>
         {this.state.Schools && (
           <div className="main">
-            <h1>{Schools.school.name}</h1>
             <div className="Header-school">
               <a href="#About">
                 <button>About</button>
@@ -53,6 +52,7 @@ class Schools extends Component {
                 <button>Reviews</button>
               </a>
             </div>
+            <h1>{Schools.school.name}</h1>
             <div className="Schools">
               <p>{Schools.school.description}</p>
               <div className="About" id="About">
