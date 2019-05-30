@@ -2,6 +2,7 @@ import React from "react";
 import Schools from "./Schools";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import { exportAllDeclaration } from "@babel/types";
 
 configure({ adapter: new Adapter() });
 

@@ -9,17 +9,20 @@ class BS extends Component {
       Schools: []
     };
   }
+
   componentDidMount = () => {
     this.getAllSchools();
   };
 
   getAllSchools = () => {
     axios.get("/schools/all").then(res => {
+      console.log(res.data)
       this.setState({
         Schools: res.data
       });
     });
   };
+  
   render() {
     const Schools = this.state.Schools.map(School => {
         console.log(School);
