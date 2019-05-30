@@ -55,9 +55,8 @@ export default function Footer() {
           Code Newbie Podcast
         </a>
       </div>
-      <div>
-        <img src={logo} alt="Logo" />
-      </div>
+      <Link to="/">
+        <img src={logo} alt="Logo" /></Link>
     </div>
   );
 }
