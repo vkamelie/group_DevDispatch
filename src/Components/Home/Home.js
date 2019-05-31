@@ -3,14 +3,14 @@ import axios from "axios";
 import Modal from "../Home/Modal/Modal";
 import "./Home.css";
 //import Flexbox from '../Flexbox/Flexbox';
-import Schools from "../Schools/Schools";
-import Featured from "../Home/Featured"
+
+import Featured from "../Home/Featured";
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       schools: [],
-      
+
       input: "",
       toggle: false
     };
