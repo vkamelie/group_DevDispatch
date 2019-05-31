@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Schools.css";
 import MakeReview from "../Review/MakeReview";
 import Reviews from "../Review/Reviews.jsx";
-import Courses from '../Courses/Courses'
+import Courses from "../Courses/Courses";
 
 class Schools extends Component {
   constructor(props) {
@@ -28,9 +28,9 @@ class Schools extends Component {
   toggleModal = () => {
     this.setState({
       show: !this.state.show
-    })
+    });
 
-    this.getReviews()
+    this.getReviews();
   };
 
   render() {
@@ -54,19 +54,16 @@ class Schools extends Component {
                 <button>Reviews</button>
               </a>
             </div>
-            <h1>{Schools.school.name}</h1>
             <div className="Schools">
+              <div className="About" id="About" style={{border: '1px solid black', textAlign: 'center'}}>
+            <h1>{Schools.school.name}</h1>
               <p>{Schools.school.description}</p>
-              <div className="About" id="About">
                 <h3>{Schools.description}</h3>
               </div>
-              <div className="Courses" id="Courses">
-                
-              </div>
+
               <h1>{Schools.school.courses.name}</h1>
 
               <div className="Reviews" id="Reviews">
-
                 <Courses courses={courses} />
                 <MakeReview
                   name={this.state.Schools.school.name}
