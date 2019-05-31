@@ -40,6 +40,7 @@ class Schools extends Component {
       <span>
         {this.state.Schools && (
           <div className="main">
+          <div className="Mmain">
             <div className="Header-school">
               <a href="#About">
                 <button>About</button>
@@ -59,6 +60,7 @@ class Schools extends Component {
               <p>{Schools.school.description}</p>
                 <h3>{Schools.description}</h3>
               </div>
+
               <h1>{Schools.school.courses.name}</h1>
 
               <div className="Reviews" id="Reviews">
@@ -73,7 +75,7 @@ class Schools extends Component {
                 <Reviews reviews={Schools.reviews} />
               </div>
             </div>
-            <div className="SideTab" />
+            <div className="SideTab" /></div>
           </div>
         )}
       </span>

@@ -1,15 +1,14 @@
 const axios = require('axios')
 module.exports = {
-    // handleInput = val => {
-    //     this.setState({
-    //       input: val
-    //     });
-    // }
-    getFeatured = () => {
-        axios.get("/schools/Featured").then(res => {
-            return res.data.data
-        });
-      }
+
+    getFeatured: () => {
+        return axios.get("/schools/Featured").then(res =>{
+            return res.data.pizza
+        })
+        // console.log(axios.get("/schools/Featured")
+        
+        }
+      
 
 
 }
