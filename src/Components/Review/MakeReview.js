@@ -121,7 +121,7 @@ class MakeReview extends Component {
       year
     } = this.state;
     return (
-      <div ><div >
+      <div >
         <ul className="guide">
           <h4>Review Guidelines</h4>
           <li>
@@ -278,7 +278,6 @@ class MakeReview extends Component {
             <button onClick={this.props.toggleModal}>Nevermind</button>
           </form>
         )}</div>
-      </div>
     );
   }
 }

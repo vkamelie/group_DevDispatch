@@ -1,0 +1,13 @@
+.course {
+    border: 1px solid black;
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.locations {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}

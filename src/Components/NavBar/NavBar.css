@@ -1,7 +1,7 @@
 .nav-items {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 120px;
     /* background-color: #44cce7; */
     background-image: linear-gradient(
@@ -15,7 +15,9 @@
     text-decoration-style: none
     
 }
+
 a{
     text-decoration: none;
-    color: black
+    color: black;
+    margin-right: 200px;
 }
