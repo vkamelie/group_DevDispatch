@@ -1,5 +1,6 @@
-const utilsFuncs = require("./utils");
-
+const utils = require("./utils");
+const axios = require('axios');
+const sinon = require('sinon');
 describe("utils Functions", () => {
   // describe('handleInput', () => {
   //     it('Should change the value of the input', () => {
@@ -7,16 +8,14 @@ describe("utils Functions", () => {
   //     })
   // })
   describe("getFeatured", () => {
-    it("shpild return list of Featured schools", () => {
-      sinon.stub(axios, "get").returns(
-        expect({
+    it("should return list of Featured schools", () => {
+      sinon.stub(axios, "get").returns(Promise.resolve({
           data: {
-            results: []
-          }
-        })
-      );
+              pizza: []
+            }
+        }));
       return utils.getFeatured().then(Schools => {
-        expect(Schools.length).toEqual(12);
+        expect(Schools.length).toEqual(0);
       });
     });
   });
