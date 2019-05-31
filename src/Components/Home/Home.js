@@ -33,6 +33,9 @@ class Home extends Component {
     return (
       <React.Fragment>
         <div className="home-main">
+        <div className="stykle">
+          <h1 className="HText">FIND THE COOLEST BOOTCAMP FOR YOU</h1>
+          <p className="HHtext">GET MATCHED WITH CODING BOOTCAMPS, CHOOSE THE SCHOOL THAT’S RIGHT FOR YOU, AND RESEARCH CODING BOOTCAMP REVIEWS IN ONE PLACE.</p></div>
           <div className="input-modal">
             <input
               placeholder="Find a school :)"

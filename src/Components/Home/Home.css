@@ -3,13 +3,36 @@
     width: 100%;
     /* border: 1px solid red; */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-image: url('https://wonderfulengineering.com/wp-content/uploads/2014/09/Green-Wallpaper-3.jpg');
-}
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(111, 197, 223),
+        rgb(20, 32, 143)
+      );}
 
 .input-modal {
     width: 50%;
+}
+/* .stykle{
+
+} */
+.HText{
+    display: flex;
+    align-items: center; 
+    /* align-content: center; */
+    /* border: 2px solid black; */
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+}
+.HHtext{
+    display: flex;
+    align-items: center; 
+    /* border: 2px solid black; */
+    padding: 20px;
+    margin: 20px;
 }
 
 .home-input {
