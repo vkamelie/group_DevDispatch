@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 import { withRouter } from "react-router-dom";
 import axios from "axios";
 
@@ -28,7 +28,7 @@ class MakeReview extends Component {
         });
       }
     });
-  } 
+  }
 
   login() {
     const redirectUri = encodeURIComponent(
@@ -121,7 +121,7 @@ class MakeReview extends Component {
       year
     } = this.state;
     return (
-      <div >
+      <div>
         <ul className="guide">
           <h4>Review Guidelines</h4>
           <li>
@@ -212,7 +212,7 @@ class MakeReview extends Component {
                 onChange={this.changeHandler}
               >
                 {this.props.courses
-                  .filter(course => course.name == this.state.course)
+                  .filter(course => course.name === this.state.course)
                   .map(otherCourse => {
                     return otherCourse.locations.map(location => {
                       return <option value={location}>{location}</option>;
@@ -277,7 +277,8 @@ class MakeReview extends Component {
             </button>
             <button onClick={this.props.toggleModal}>Nevermind</button>
           </form>
-        )}</div>
+        )}
+      </div>
     );
   }
 }

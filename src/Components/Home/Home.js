@@ -3,14 +3,14 @@ import axios from "axios";
 import Modal from "../Home/Modal/Modal";
 import "./Home.css";
 //import Flexbox from '../Flexbox/Flexbox';
-import Schools from "../Schools/Schools";
-import Featured from "../Home/Featured"
+
+import Featured from "../Home/Featured";
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       schools: [],
-      
+
       input: "",
       toggle: false
     };
@@ -33,9 +33,17 @@ class Home extends Component {
     return (
       <React.Fragment>
         <div className="home-main">
-        <div className="stykle">
-          <h1 className="HText">FIND THE COOLEST BOOTCAMP FOR YOU</h1>
-          <p className="HHtext">GET MATCHED WITH CODING BOOTCAMPS, CHOOSE THE SCHOOL THAT’S RIGHT FOR YOU, AND RESEARCH CODING BOOTCAMP REVIEWS IN ONE PLACE.</p></div>
+          <div className="stykle">
+            <h1 className="HText">FIND THE COOLEST BOOTCAMP FOR YOU</h1>
+            <p className="HHtext">
+              GET MATCHED WITH CODING BOOTCAMPS, CHOOSE THE SCHOOL THAT’S RIGHT
+              FOR YOU
+            </p>
+            <p className="lsText">
+              {" "}
+              AND RESEARCH CODING BOOTCAMP REVIEWS IN ONE PLACE.
+            </p>
+          </div>
           <div className="input-modal">
             <input
               placeholder="Find a school :)"
