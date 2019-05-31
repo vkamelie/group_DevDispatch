@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import './Browse.css';
 
 class BS extends Component {
   constructor(props) {
@@ -25,13 +26,13 @@ class BS extends Component {
   render() {
     const Schools = this.state.Schools.map(School => {
       return (
-        <div className="schoolList">
-          <Link to={`/schools/${School.id}/reviews`}>
-            <div className="BSmain">
+          <div>
+        <Link to={`/schools/${School.id}/reviews`}>
+            <div className = 'schoolList' >
               <h2>{School.name}</h2>
+          <p>{School.description}</p>
             </div>
           </Link>
-          <p>{School.description}</p>
         </div>
       );
     });
