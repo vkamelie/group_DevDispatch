@@ -40,12 +40,12 @@ justify-content: center;
 .guide{
     border: 2px solid black;
     box-sizing: border-box;
-    height: 250px;
     flex-wrap: wrap;
     display: list-item;
-    width: 800px;
-    /* background-color: #44cce7; */
-    /* text-decoration: underline */
+    width: 80%;
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: center;
     background-image: linear-gradient(
         to bottom right,
         rgb(147, 213, 233),

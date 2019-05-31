@@ -36,7 +36,6 @@ class Schools extends Component {
   render() {
     const Schools = this.state.Schools;
     const courses = this.state.Schools && this.state.Schools.school.courses;
-    console.log(courses)
     return (
       <span>
         {this.state.Schools && (

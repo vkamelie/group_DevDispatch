@@ -63,8 +63,7 @@ describe("Home Component", () => {
   });
   it("Makes sure the Featured component is rendered by Home", () => {
     //Patrick McMahon
-
-    const homee = mount(<Home />);
-    expect(homee.children(Featured).length).toEqual(0);
+    const homee = mount(<Featured />);
+    expect(homee.exists()).toBe(true);
   });
 });
