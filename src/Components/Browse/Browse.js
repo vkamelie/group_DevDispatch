@@ -12,7 +12,7 @@ class Browse extends Component {
   render() {
     return (
       <div className="main">
-        <div className="Featured">Featured Schools </div>
+        <div className="Featured"> </div>
         <div className="schoolList">
           <BS />
         </div>
